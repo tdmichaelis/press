@@ -1,0 +1,52 @@
+// Copyright (C) YOOtheme GmbH, http://www.gnu.org/licenses/gpl.html GNU/GPL */
+
+//
+// Component: List
+//
+// ========================================================================
+
+
+// Variables
+// ========================================================================
+
+@list-line-border:                              @global-border;
+@list-striped-background:                       @global-light-background;
+
+//
+// New
+//
+
+@list-link-color:                                @global-color;
+@list-link-hover:                                @global-link-color;
+
+
+// Modifier: `list-line`
+// ========================================================================
+
+.hook-list-line() {}
+
+
+// Modifier: `list-striped`
+// ========================================================================
+
+.hook-list-striped() {}
+
+
+// Miscellaneous
+// ========================================================================
+
+.hook-list-misc() {
+
+    .uk-list {
+
+        > li > a {
+
+            color: @list-link-color;
+
+            &:hover { color: @list-link-hover; }
+
+        }
+
+    }
+
+}

@@ -1,0 +1,70 @@
+// Copyright (C) YOOtheme GmbH, http://www.gnu.org/licenses/gpl.html GNU/GPL */
+
+//
+// Component: Slidenav
+//
+// ========================================================================
+
+// Variables
+// ========================================================================
+
+@slidenav-width:                                30px;
+
+@slidenav-previous-icon:                        "";
+@slidenav-next-icon:                            "";
+
+//
+// New
+//
+
+@slidenav-border:                               @global-color;
+@slidenav-border-contrast:                      @global-contrast-color;
+
+
+// Component
+// ========================================================================
+
+.hook-slidenav() {
+    border: 1px solid @slidenav-border;
+    border-radius: 1px;
+    opacity: 0.5;
+}
+
+.hook-slidenav-hover() {}
+
+.hook-slidenav-active() {}
+
+.hook-slidenav-contrast() {}
+
+.hook-slidenav-contrast-hover() {}
+
+.hook-slidenav-contrast-active() {}
+
+
+// Miscellaneous
+// ========================================================================
+
+.hook-slidenav-misc() {
+
+    .uk-slidenav-previous,
+    .uk-slidenav-next {
+        background-image: url("@{global-image-path}/@{global-style}/buttons.svg");
+        background-position: 0 0;
+        background-repeat: no-repeat;
+    }
+
+    .uk-slidenav-contrast.uk-slidenav-previous,
+    .uk-slidenav-contrast.uk-slidenav-next {
+        background-image: url("@{global-image-path}/@{global-style}/buttons_contrast.svg");
+        border: 1px solid @slidenav-border-contrast;
+    }
+
+    .uk-slidenav-previous { background-position: 0 -30px; }
+
+    .uk-slidenav-next:hover,
+    .uk-slidenav-previous:hover { opacity: 1; }
+
+    .uk-slidenav-position:hover .uk-slidenav-next { right: 20px; }
+    .uk-slidenav-position:hover .uk-slidenav-previous { left: 20px; }
+
+}

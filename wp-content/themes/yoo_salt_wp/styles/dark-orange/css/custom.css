@@ -1,0 +1,11 @@
+/* Copyright (C) YOOtheme GmbH, http://www.gnu.org/licenses/gpl.html GNU/GPL */
+
+/* ========================================================================
+   Use this file to add custom CSS easily
+ ========================================================================== */
+
+.tm-logo path,
+.tm-logo-small svg path { fill: #f3a36d; }
+
+.tm-logo path.tm-logo-primary-color,
+.tm-logo-small svg path.tm-logo-primary-color { fill: #fff; }

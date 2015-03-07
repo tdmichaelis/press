@@ -1,0 +1,182 @@
+// Copyright (C) YOOtheme GmbH, http://www.gnu.org/licenses/gpl.html GNU/GPL */
+
+//
+// Component: Panel
+//
+// ========================================================================
+
+
+// Variables
+// ========================================================================
+
+@panel-box-padding:                                       @global-margin;
+
+@panel-title-margin-bottom:                               @global-margin;
+@panel-title-font-size:                                   30px;
+@panel-title-line-height:                                 40px;
+@panel-title-color:                                       @global-heading-color;
+@panel-box-badge-top:                                     0;
+
+@panel-teaser-margin-bottom:                              @global-margin-large;
+
+@panel-box-background-startcolor:                         #fff;
+@panel-box-background-endcolor:                           #f9f9f9;
+@panel-box-color:                                         @global-color;
+@panel-box-title-color:                                   @global-heading-color;
+
+@panel-box-primary-background-startcolor:                 #fff;
+@panel-box-primary-background-endcolor:                   #f2f2f2;
+@panel-box-primary-color:                                 @global-color;
+@panel-box-primary-title-color:                           @global-heading-color;
+
+@panel-box-secondary-background-startcolor:               #fff;
+@panel-box-secondary-background-endcolor:                 #e8eae9;
+@panel-box-secondary-color:                               @global-color;
+@panel-box-secondary-title-color:                         @global-heading-color;
+
+@panel-hover-padding:                                     @global-margin;
+@panel-hover-hover-color:                                 @global-color;
+@panel-hover-hover-background:                            #f2f2f2;
+
+@panel-hover-badge-top:                                   0;
+
+@panel-header-title-border:                               @global-border;
+@panel-header-title-color:                                @global-heading-color;
+
+@panel-divider-gutter:                                    @global-grid-gutter;
+@panel-divider-gutter-large:                              @global-grid-gutter-large;
+@panel-divider-border:                                    @global-border;
+
+@panel-box-primary-bg-image:                              url('@{global-image-path}/@{global-style}/background.png');
+
+//
+// New
+//
+
+@panel-box-margin-large:                                 50px;
+
+
+// Sub-object: `uk-panel-title`
+// ========================================================================
+
+.hook-panel-title() {}
+
+
+// Sub-object: `uk-panel-badge`
+// ========================================================================
+
+.hook-panel-badge() {}
+
+
+// Modifier: `uk-panel-box`
+// ========================================================================
+
+.hook-panel-box() {
+
+    background-color: @panel-box-background-endcolor;
+
+    background: @panel-box-primary-bg-image 0 0 repeat,
+                -webkit-radial-gradient(center, ellipse cover, @panel-box-background-startcolor 0%,@panel-box-background-endcolor 100%);
+
+    background: @panel-box-primary-bg-image 0 0 repeat,
+                radial-gradient(ellipse at center, @panel-box-background-startcolor 0%,@panel-box-background-endcolor 100%);
+
+}
+
+.hook-panel-box-hover() {}
+
+//
+// Sub-modifier: `uk-panel-box-primary`
+//
+
+.hook-panel-box-primary() {
+
+    background-color: @panel-box-primary-background-endcolor;
+
+    background: @panel-box-primary-bg-image 0 0 repeat,
+                -webkit-radial-gradient(center, ellipse cover, @panel-box-primary-background-startcolor 0%,@panel-box-primary-background-endcolor 100%);
+
+    background: @panel-box-primary-bg-image 0 0 repeat,
+                radial-gradient(ellipse at center, @panel-box-primary-background-startcolor 0%,@panel-box-primary-background-endcolor 100%);
+
+}
+
+.hook-panel-box-primary-hover() {}
+
+//
+// Sub-modifier: `uk-panel-box-secondary`
+//
+
+.hook-panel-box-secondary() {
+
+    background-color: @panel-box-secondary-background-endcolor;
+
+    background: @panel-box-primary-bg-image 0 0 repeat,
+                -webkit-radial-gradient(center, ellipse cover, @panel-box-secondary-background-startcolor 0%,@panel-box-secondary-background-endcolor 100%);
+
+    background: @panel-box-primary-bg-image 0 0 repeat,
+                radial-gradient(ellipse at center, @panel-box-secondary-background-startcolor 0%,@panel-box-secondary-background-endcolor 100%);
+
+}
+
+.hook-panel-box-secondary-hover() {}
+
+
+// Modifier: `uk-panel-hover`
+// ========================================================================
+
+.hook-panel-hover() {}
+
+.hook-panel-hover-hover() {}
+
+
+// Modifier: `uk-panel-header`
+// ========================================================================
+
+.hook-panel-header() {}
+
+
+// Miscellaneous
+// ========================================================================
+
+.hook-panel-misc() {
+
+    .uk-panel-box > .uk-nav-side .uk-nav-sub,
+    .uk-panel-box > .uk-nav-side .uk-nav-header,
+    .uk-panel-box > .uk-nav-side > li > a {
+        margin-left: @global-margin;
+        margin-right: @global-margin;
+    }
+
+    .uk-panel-space .uk-panel-teaser {
+        margin-top: -@global-margin;
+        margin-left: -@global-margin;
+        margin-right: -@global-margin;
+    }
+
+    .uk-panel-space .uk-panel-badge {
+        top: 0;
+        right: 0;
+    }
+
+    /* Only xlarge screens */
+    @media (min-width: @breakpoint-xlarge) {
+
+        .uk-panel-space,
+        .uk-panel-box { padding: @panel-box-margin-large; }
+
+        .uk-panel-box .uk-panel-teaser {
+            margin-top: -@panel-box-margin-large;
+            margin-left: -@panel-box-margin-large;
+            margin-right: -@panel-box-margin-large;
+        }
+
+        .uk-panel-space .uk-panel-teaser {
+            margin-top: -@panel-box-margin-large;
+            margin-left: -@panel-box-margin-large;
+            margin-right: -@panel-box-margin-large;
+        }
+
+    }
+
+}

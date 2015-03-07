@@ -1,0 +1,42 @@
+// Copyright (C) YOOtheme GmbH, http://www.gnu.org/licenses/gpl.html GNU/GPL */
+
+// Variables
+// ========================================================================
+
+
+// Additional style fixes
+// ========================================================================
+
+/* Button and link color overrides */
+
+.woocommerce,
+.woocommerce-page {
+
+    .woocommerce-message,
+    .woocommerce-error,
+    .woocommerce-info {
+
+        // Button Style
+        .button {
+
+            border-color: @global-contrast-color;
+            color: @global-contrast-color;
+
+            &:hover,
+            &:focus {
+                border-color: fade(@global-contrast-color, 70%);
+                color: fade(@global-contrast-color, 70%);
+            }
+
+        }
+
+    }
+
+    .widget_price_filter {
+
+        // Price Filter Handle
+        .ui-slider .ui-slider-handle { background: lighten(@progress-bar-background, 25%); }
+
+    }
+
+}

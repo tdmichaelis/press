@@ -1,0 +1,61 @@
+// Copyright (C) YOOtheme GmbH, http://www.gnu.org/licenses/gpl.html GNU/GPL */
+
+//
+// Component: Pagination
+//
+// ========================================================================
+
+
+// Variables
+// ========================================================================
+
+@pagination-line-height:                        @global-line-height;
+@pagination-background:                         rgba(0,0,0,0);
+@pagination-color:                              @global-color;
+@pagination-hover-background:                   rgba(0,0,0,0);
+@pagination-hover-color:                        @global-link-color;
+@pagination-onclick-background:                 rgba(0,0,0,0);
+@pagination-onclick-color:                      @global-link-color;
+
+@pagination-active-background:                  rgba(0,0,0,0);
+@pagination-active-color:                       @global-link-color;
+
+@pagination-disabled-background:                @global-light-background;
+@pagination-disabled-color:                     @global-muted-color;
+
+//
+// New
+//
+
+@pagination-border:                            @global-border;
+@pagination-hover-border:                      @global-link-color;
+@pagination-active-border:                     @pagination-hover-border;
+@pagination-disabled-border:                   rgba(0,0,0,0);
+
+// Component
+// ========================================================================
+
+//
+// Items
+//
+
+.hook-pagination-item() { border: 1px solid @pagination-border; }
+
+// Link
+.hook-pagination-link() {}
+
+.hook-pagination-link-hover() { border-color: @pagination-hover-border; }
+
+.hook-pagination-link-active() { border-color: @pagination-active-border; }
+
+// Active
+.hook-pagination-active() { border-color: @pagination-active-border; }
+
+// Disabled
+.hook-pagination-disabled() { border-color: @pagination-disabled-border; }
+
+
+// Miscellaneous
+// ========================================================================
+
+.hook-pagination-misc() {}

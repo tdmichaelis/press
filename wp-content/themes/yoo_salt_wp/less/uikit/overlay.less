@@ -1,0 +1,55 @@
+// Copyright (C) YOOtheme GmbH, http://www.gnu.org/licenses/gpl.html GNU/GPL */
+
+//
+// Component: Overlay
+//
+// ========================================================================
+
+
+// Variables
+// ========================================================================
+
+//
+// New
+//
+
+@overlay-panel-overlay-background-button-border-color:			@global-contrast-color;
+@overlay-panel-overlay-background-button-color:					@global-contrast-color;
+@overlay-panel-overlay-background-button-primary-background:	@global-contrast-color;
+@overlay-panel-overlay-background-button-primary-color:			@global-color;
+
+
+// Sub-object `uk-overlay-panel`
+// ========================================================================
+
+.hook-overlay-panel() {
+
+	.uk-button {
+		border-color: @overlay-panel-overlay-background-button-border-color;
+		color: @overlay-panel-overlay-background-button-color;
+	}
+
+	.uk-button-primary {
+		background: @overlay-panel-overlay-background-button-primary-background;
+		color: @overlay-panel-overlay-background-button-primary-color;
+	}
+
+}
+
+
+// Sub-object `uk-overlay-background`
+// ========================================================================
+
+.hook-overlay-background() {}
+
+
+// Sub-object `uk-overlay-icon`
+// ========================================================================
+
+.hook-overlay-icon() {}
+
+
+// Miscellaneous
+// ========================================================================
+
+.hook-overlay-misc() {}

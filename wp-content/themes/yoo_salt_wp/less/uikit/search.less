@@ -1,0 +1,148 @@
+// Copyright (C) YOOtheme GmbH, http://www.gnu.org/licenses/gpl.html GNU/GPL */
+
+//
+// Component: Search
+//
+// ========================================================================
+
+
+// Variables
+// ========================================================================
+
+
+@search-height:                                 @global-height;
+@search-background:                             rgba(0,0,0,0);
+@search-color:                                  @global-color;
+@search-placeholder-color:                      rgba(0,0,0,0);
+
+@dropdown-search-background:                    @global-dropdown-background;
+@dropdown-search-color:                         @global-color;
+
+@nav-search-color:                              @global-color;
+@nav-search-active-background:                  rgba(0,0,0,0);
+@nav-search-active-color:                       @global-link-color;
+@nav-search-header-color:                       @global-dark-color;
+@nav-search-divider-border:                     @global-border;
+@nav-search-nested-color:                       @global-color;
+@nav-search-nested-hover-color:                 @global-link-color;
+
+@search-width:                                  @search-padding;
+@search-focus-width:                            150px;
+@search-icon-size:                              20px;
+@search-icon-color:                             @global-dark-color;
+
+@offcanvas-search-margin:                       0;
+@offcanvas-search-background:                   rgba(0,0,0,0);
+@offcanvas-search-color:                        @global-color;
+@offcanvas-search-placeholder-color:            rgba(0,0,0,0);
+@offcanvas-search-icon-color:                   @global-dark-color;
+
+//
+// New
+//
+
+@nav-search-hover-color:                        @global-link-color;
+@nav-search-padding-horizontal:                 40px;
+
+
+// Component
+// ========================================================================
+
+.hook-search() {}
+
+.hook-search-icon() {}
+
+
+// Sub-object `uk-search-field`
+// ========================================================================
+
+.hook-search-field() {
+    position: relative;
+    z-index: 1;
+    padding: 0;
+    cursor: pointer;
+}
+
+.hook-search-field-focus() {}
+
+
+// Dropdown modifier: `uk-dropdown-search`
+// ========================================================================
+
+.hook-dropdown-search() {}
+
+
+// Nav modifier `uk-nav-search`
+// ========================================================================
+
+//
+// Items
+//
+
+.hook-nav-search() {
+    padding-left: @nav-search-padding-horizontal;
+    padding-right: @nav-search-padding-horizontal;
+}
+
+// Active
+.hook-nav-search-active() {}
+
+//
+// Sub-object: `uk-nav-header`
+//
+
+.hook-nav-search-header() {
+    padding-left: @nav-search-padding-horizontal;
+    padding-right: @nav-search-padding-horizontal;
+}
+
+//
+// Sub-object: `uk-nav-divider`
+//
+
+.hook-nav-search-divider() {}
+
+
+// Search in offcanvas
+// ========================================================================
+
+.hook-offcanvas-search-field() {}
+
+
+// Miscellaneous
+// ========================================================================
+
+.hook-search-misc() {
+
+    // Modifier: `uk-nav-search`
+    // ========================================================================
+
+    // Hover
+    .uk-nav-search > li > a:hover { color: @nav-search-hover-color; }
+
+    // Sub-object `uk-search-field`
+    // ========================================================================
+
+    .uk-search-field:focus,
+    .uk-active .uk-search-field {
+        padding: 0 @search-padding;
+        cursor: text;
+    }
+
+    // Search in offcanvas
+    // ========================================================================
+
+    .uk-offcanvas .uk-search:before {
+        left: 50%;
+        margin-left: -15px;
+    }
+
+    .uk-search-field { color: transparent; }
+
+    .uk-offcanvas .uk-search-field:focus {
+        padding: 0 @global-margin-small;
+        background: @global-background;
+        text-align: center;
+    }
+
+}

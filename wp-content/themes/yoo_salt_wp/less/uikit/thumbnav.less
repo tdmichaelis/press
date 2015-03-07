@@ -1,0 +1,38 @@
+// Copyright (C) YOOtheme GmbH, http://www.gnu.org/licenses/gpl.html GNU/GPL */
+
+//
+// Component: Thumbnav
+//
+// ========================================================================
+
+// Variables
+// ========================================================================
+
+//
+// New
+//
+
+@thumbnav-border-radius: 				3px;
+
+
+// Component
+// ========================================================================
+
+.hook-thumbnav() { border-radius: @thumbnav-border-radius; }
+
+
+// Miscellaneous
+// ========================================================================
+
+.hook-thumbnav-misc() {
+
+	.uk-thumbnav > * > * > img { border-radius: @thumbnav-border-radius; }
+
+	/* Phone landscape and smaller*/
+	@media (max-width: @breakpoint-small-max) {
+
+	    .uk-thumbnav > * { width: 80px; }
+
+	}
+
+}

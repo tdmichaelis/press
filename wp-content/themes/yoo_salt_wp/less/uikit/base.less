@@ -1,0 +1,68 @@
+// Copyright (C) YOOtheme GmbH, http://www.gnu.org/licenses/gpl.html GNU/GPL */
+
+//
+// Component: Base
+//
+// ========================================================================
+
+// Variables
+// ========================================================================
+
+@base-body-background:                          @global-background;
+@base-margin-vertical:							@global-margin;
+
+@base-body-color:                               @global-color;
+@base-body-font-family:                         'Roboto', Helvetica, Arial, sans-serif;
+@base-body-font-weight:                         @global-font-weight;
+@base-body-font-size:                           @global-font-size;
+@base-body-line-height:                         @global-line-height;
+
+@base-heading-text-transform:					uppercase;
+@base-h2-font-size:                             30px;
+@base-h2-line-height:                           40px;
+
+@base-link-color:                               @global-link-color;
+@base-link-hover-color:                         @global-link-hover-color;
+@base-link-hover-text-decoration:               none;
+
+@base-heading-font-family:                      'Montserrat', Helvetica, Arial, sans-serif;
+@base-heading-color:                            @global-heading-color;
+
+@base-hr-border:                                @global-border;
+@base-blockquote-border:                        @global-border;
+@base-pre-background:                           @global-light-background;
+@base-pre-color:                                @global-color;
+
+
+// Body
+// ========================================================================
+
+.hook-base-body() {}
+
+
+// Code and preformatted text
+// ========================================================================
+
+.hook-base-code() {}
+
+.hook-base-code-reset() {}
+
+.hook-base-pre() {}
+
+
+// Miscellaneous
+// ========================================================================
+
+.hook-base-misc() {
+
+
+	/*
+	 * Links
+	 */
+
+	a {
+	    -webkit-transition: color 0.15s ease-in-out;
+	    transition: color 0.15s ease-in-out;
+	}
+
+}

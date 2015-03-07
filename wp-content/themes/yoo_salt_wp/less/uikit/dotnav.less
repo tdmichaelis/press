@@ -1,0 +1,91 @@
+// Copyright (C) YOOtheme GmbH, http://www.gnu.org/licenses/gpl.html GNU/GPL */
+
+//
+// Component: Dotnav
+//
+// ========================================================================
+
+
+// Variables
+// ========================================================================
+
+@dotnav-width:                                  18px;
+@dotnav-background:                             rgba(0,0,0,0);
+@dotnav-border:                                 rgba(0,0,0,0);
+@dotnav-hover-background:                       rgba(0,0,0,0);
+@dotnav-onclick-background:                     rgba(0,0,0,0);
+@dotnav-active-background:                      rgba(0,0,0,0);
+
+@dotnav-contrast-background:                    rgba(0,0,0,0);
+@dotnav-contrast-hover-background:              rgba(0,0,0,0);
+@dotnav-contrast-onclick-background:            rgba(0,0,0,0);
+@dotnav-contrast-active-background:             rgba(0,0,0,0);
+
+//
+// New
+//
+
+@dotnav-hover-border:                            @global-color;
+@dotnav-onclick-border:                          @global-link-color;
+@dotnav-active-border:                           @global-link-color;
+
+@dotnav-contrast-hover-border:                   @global-contrast-color;
+@dotnav-contrast-onclick-border:                 @global-contrast-color;
+@dotnav-contrast-active-border:                  @global-contrast-color;
+
+@dotnav-before-width:                            8px;
+@dotnav-before-height:                           @dotnav-before-width;
+@dotnav-before-background:                       @global-color;
+@dotnav-before-hover-background:                 rgba(0,0,0,0);
+
+@dotnav-contrast-before-background:              @global-contrast-color;
+
+
+// Component
+// ========================================================================
+
+.hook-dotnav-item() { border: 2px solid @dotnav-border; }
+
+.hook-dotnav-item-hover() { border-color: @dotnav-hover-border; }
+
+.hook-dotnav-item-onclick() { border-color:  @dotnav-onclick-border; }
+
+.hook-dotnav-item-active() { border-color: @dotnav-active-border; }
+
+.hook-dotnav-contrast-item() {}
+
+.hook-dotnav-contrast-item-hover() { border-color: @dotnav-contrast-hover-border; }
+
+.hook-dotnav-contrast-item-onclick() { border-color: @dotnav-contrast-onclick-border; }
+
+.hook-dotnav-contrast-item-active() { border-color: @dotnav-contrast-active-border; }
+
+
+// Miscellaneous
+// ========================================================================
+
+.hook-dotnav-misc() {
+
+    .uk-dotnav > li { position: relative; }
+
+    .uk-dotnav > li > a:before {
+        content: '';
+        position: absolute;
+        top: ((@dotnav-width / 2) - (@dotnav-before-width / 2) + 2px);
+        left: (@dotnav-margin-horizontal + ((@dotnav-before-width / 2) + 2px));
+        width: @dotnav-before-width;
+        height: @dotnav-before-height;
+        background: @dotnav-before-background;
+        border-radius: 50%;
+    }
+
+    .uk-dotnav > li.uk-active > a:before,
+    .uk-dotnav > li > a:hover:before,
+    .uk-dotnav > li > a:active:before {
+        content: '';
+        background: @dotnav-before-hover-background;
+    }
+
+    .uk-dotnav-contrast > li > a:before { background: @dotnav-contrast-before-background; }
+
+}

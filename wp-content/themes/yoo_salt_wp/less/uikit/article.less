@@ -1,0 +1,65 @@
+// Copyright (C) YOOtheme GmbH, http://www.gnu.org/licenses/gpl.html GNU/GPL */
+
+//
+// Component: Article
+//
+// ========================================================================
+
+
+// Variables
+// ========================================================================
+
+@article-margin-top:                            @global-margin;
+
+@article-title-font-size:                       30px;
+@article-title-text-transform:                  uppercase;
+
+@article-meta-color:                            @global-muted-color;
+
+@article-lead-color:                            @global-dark-color;
+
+@article-divider-border:                        @global-border;
+
+//
+// New
+//
+
+@article-title-margin-bottom:                   35px;
+
+
+// Sub-object `uk-article-title`
+// ========================================================================
+
+.hook-article-title() {
+
+    /* Only large screens */
+    @media (min-width: @breakpoint-large) {
+
+        margin-bottom: @article-title-margin-bottom;
+    }
+
+}
+
+
+// Sub-object `uk-article-meta`
+// ========================================================================
+
+.hook-article-meta() {}
+
+
+// Sub-object `uk-article-lead`
+// ========================================================================
+
+.hook-article-lead() {}
+
+
+// Sub-object `uk-article-divider`
+// ========================================================================
+
+.hook-article-divider() {}
+
+
+// Miscellaneous
+// ========================================================================
+
+.hook-article-misc() {}
